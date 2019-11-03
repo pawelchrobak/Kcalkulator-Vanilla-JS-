@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kcalculator - ustawienia</title>
+        <link rel='stylesheet' type='text/css' href='./css/index.css'>
+    </head>
+    <body>
+        <h1>USTAWIENIA</h1>
+        <nav id="main-menu">
+            <ul>
+                <li><a href="index.html">MAIN</a></li>
+                <li><a href="settings.html">USTAWIENIA</a></li>
+                <li><a href="wykresy.html">WYKRESY</a></li>
+            </ul>
+        </nav>
+
+        <section id="settings-target-cals">
+            <h1>Limit kalorii</h1>
+            <label id="label-target-cals" for="input-target-cals">Podaj planowaną liczbę kalorii:</label>
+            <br>
+            <input type="text" id="input-target-cals">
+            <button type="button" id="button-target-cals">Zapisz</button>
+        </section>
+
+        <section id="settings-editor-table">
+            <h1>Edytor produktów</h1>
+            <table>
+                <tbody  id="editor-table">
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Kalorie</th>
+                        <th>Opcje</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <label id="label-new-item" for="input-new-item">Dodaj nowy produkt:</label>
+            <br>
+            <input type="text" id="input-new-item-name" placeholder="nazwa produktu">
+            <input type="text" id="input-new-item-cals" placeholder="kalorie">
+            <button type="button" id="button-new-item">Dodaj</button>
+            <br>
+            <button id="editor-submit-button">Zapisz wszystkie zmiany</button>
+        </section>
+
+        <section>
+            <h1>DevTools</h1>
+            <button onclick="calsCounter.addEatenCals(fullDate,(-1)*calsCounter.eatenCals(fullDate));">Wyczyść spożyte kalorie</button>
+            <br>
+            <br>
+            <button onclick="localStorage.clear()">Resetuj aplikację</button>
+        </section>
+        <script type="text/javascript" src="js/foods.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
+    </body>
+</html>
